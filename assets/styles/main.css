@@ -1,0 +1,129 @@
+/* Main CSS file that imports all modules */
+@import url("reset.css");
+@import url("variables.css");
+@import url("header.css");
+@import url("hero.css");
+@import url("trending.css");
+@import url("reasons.css");
+@import url("faq.css");
+@import url("footer.css");
+@import url("responsive.css");
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.section-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text);
+}
+
+/* Common button styles */
+.get-started-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.get-started-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.get-started-btn .arrow {
+    font-size: 1.2em;
+    margin-left: var(--spacing-xs);
+    font-weight: 700;
+}
+
+.sign-in-btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.sign-in-btn:hover {
+    background-color: var(--color-primary-hover);
+    text-decoration: none;
+}
+
+/* Email form common styles */
+.email-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.email-form input {
+    flex: 1;
+    padding: var(--spacing-md);
+    font-size: var(--font-size-md);
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    color: var(--color-text);
+}
+
+.email-form input::placeholder {
+    color: #8c8c8c;
+}
+
+/* Language selector common styles */
+.language-selector {
+    position: relative;
+}
+
+.language-selector select {
+    padding: var(--spacing-xs) var(--spacing-lg) var(--spacing-xs) var(--spacing-md);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--color-text);
+    font-size: var(--font-size-sm);
+    border: 1px solid var(--color-text-secondary);
+    border-radius: var(--border-radius-sm);
+    appearance: none;
+    cursor: pointer;
+}
+
+.language-selector::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7em;
+    color: var(--color-text);
+    pointer-events: none;
+}

@@ -1,0 +1,54 @@
+/* Reasons section styles */
+.reasons {
+    padding: var(--spacing-xxl) 0;
+    /* background-color: var(--color-background-alt); */
+}
+
+.reasons__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.reasons__card {
+    background-color: var(--color-card-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+}
+
+.reasons__icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto var(--spacing-md);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.tv-icon {
+    background-image: url('../icons/tv.png');
+}
+
+.download-icon {
+    background-image: url('../icons/download.png');
+}
+
+.devices-icon {
+    background-image: url('../icons/devices.png');
+}
+
+.profile-icon {
+    background-image: url('../icons/profile.png');
+}
+
+.reasons__card h3 {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+}
+
+.reasons__card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}

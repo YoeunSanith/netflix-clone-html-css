@@ -1,0 +1,41 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+input, button, select {
+    font-family: inherit;
+    outline: none;
+}

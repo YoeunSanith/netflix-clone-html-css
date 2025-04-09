@@ -1,0 +1,19 @@
+netflix-clone/
+├── index.html
+├── assets/
+│   ├── css/
+│   │   ├── main.css           (imports all CSS files)
+│   │   ├── reset.css          (basic resets)
+│   │   ├── variables.css      (CSS variables)
+│   │   ├── header.css         (header styles)
+│   │   ├── hero.css           (hero section)
+│   │   ├── trending.css       (trending section)
+│   │   ├── reasons.css        (reasons to join)
+│   │   ├── faq.css            (FAQ accordion)
+│   │   ├── footer.css         (footer styles)
+│   │   └── responsive.css     (media queries)
+│   └── images/
+│       ├── logo.png
+│       ├── hero-bg.jpg
+│       ├── movies/
+│       └── icons/

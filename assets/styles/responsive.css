@@ -1,0 +1,93 @@
+/* Responsive styles */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    :root {
+        --font-size-hero: 40px;
+        --spacing-xxl: 48px;
+    }
+    
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero {
+        min-height: 600px;
+    }
+    
+    .reasons__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    :root {
+        --font-size-hero: 32px;
+        --font-size-xl: 20px;
+        --spacing-xxl: 40px;
+    }
+    
+    .container {
+        max-width: 540px;
+    }
+    
+    .hero {
+        min-height: 500px;
+    }
+    
+    .email-form {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .footer__column {
+        flex: 0 0 50%;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    :root {
+        --font-size-hero: 28px;
+        --font-size-xl: 18px;
+        --font-size-lg: 16px;
+        --spacing-xl: 24px;
+        --spacing-xxl: 32px;
+    }
+    
+    .hero {
+        min-height: 400px;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding-left: var(--spacing-md);
+        padding-right: var(--spacing-md);
+    }
+    
+    .reasons__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .footer__column {
+        flex: 0 0 100%;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .nav__menu {
+        gap: var(--spacing-sm);
+    }
+    
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
+}

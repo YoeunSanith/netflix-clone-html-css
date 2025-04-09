@@ -1,0 +1,540 @@
+/* ========== CSS Variables ========== */
+:root {
+    /* Colors */
+    --color-primary: #e50914;
+    --color-primary-hover: #f40612;
+    --color-text: #ffffff;
+    --color-text-secondary: #e5e5e5;
+    --color-background: #000000;
+    --color-background-alt: #141414;
+    --color-card-bg: #181818;
+    --color-overlay: rgba(0, 0, 0, 0.5);
+    --color-input-bg: rgba(22, 22, 22, 0.7);
+    --color-border: #333333;
+    --color-faq-bg: #303030;
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+    
+    /* Font sizes */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+    --font-size-hero: 48px;
+    
+    /* Borders */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+}
+
+/* ========== Base Styles ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Netflix Sans', Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+}
+
+/* ========== Button Styles ========== */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius-sm);
+    font-weight: 700;
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    text-align: center;
+}
+
+.btn-sign-in {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.btn-sign-in:hover {
+    background-color: var(--color-primary-hover);
+    text-decoration: none;
+}
+
+.btn-get-started {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-md) var(--spacing-xl);
+}
+
+.btn-get-started:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* ========== Header Styles ========== */
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: var(--spacing-lg) 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.language-selector {
+    background-color: transparent;
+    color: var(--color-text);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--color-text-secondary);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+}
+
+/* ========== Hero Section Styles ========== */
+.hero {
+    position: relative;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: var(--spacing-xxl) 0;
+}
+
+.hero h1 {
+    font-size: var(--font-size-hero);
+    font-weight: 900;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-lg);
+}
+
+.email-info {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.email-form {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: var(--spacing-sm);
+}
+
+.email-input {
+    flex: 1;
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-lg);
+    border-radius: var(--border-radius-sm);
+}
+
+.email-input::placeholder {
+    color: #8c8c8c;
+}
+
+/* ========== Section Titles ========== */
+.section-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xl);
+    text-align: left;
+}
+
+/* ========== Trending Section Styles ========== */
+.trending {
+    padding: var(--spacing-xxl) 0;
+}
+
+.trending-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--spacing-md);
+    padding-bottom: var(--spacing-lg);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--color-background);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.trending-carousel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.trending-carousel::-webkit-scrollbar-track {
+    background: var(--color-background-alt);
+}
+
+.trending-carousel::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 20px;
+}
+
+.movie-card {
+    position: relative;
+    flex: 0 0 auto;
+    width: 200px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+}
+
+.rank {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--color-text);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.movie-info {
+    padding: var(--spacing-sm) 0;
+}
+
+.movie-info h3 {
+    font-size: var(--font-size-md);
+    font-weight: 500;
+}
+
+/* ========== Reasons Section Styles ========== */
+.reasons {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-background-alt);
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.reason-card {
+    background-color: var(--color-card-bg);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+}
+
+.reason-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto var(--spacing-md);
+}
+
+.reason-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.reason-card h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.reason-card p {
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+}
+
+/* ========== FAQ Section Styles ========== */
+.faq {
+    padding: var(--spacing-xxl) 0;
+}
+
+.faq-list {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.faq-item {
+    margin-bottom: var(--spacing-md);
+}
+
+.faq-toggle {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.faq-question {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: var(--spacing-lg);
+    background-color: var(--color-faq-bg);
+    color: var(--color-text);
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-text);
+    transition: transform 0.3s;
+}
+
+.faq-icon::before {
+    width: 16px;
+    height: 2px;
+}
+
+.faq-icon::after {
+    width: 2px;
+    height: 16px;
+}
+
+.faq-toggle:checked + .faq-question {
+    background-color: var(--color-faq-bg);
+    margin-bottom: 0;
+}
+
+.faq-toggle:checked + .faq-question .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--color-faq-bg);
+    transition: max-height 0.3s;
+}
+
+.faq-toggle:checked ~ .faq-answer {
+    max-height: 300px;
+}
+
+.faq-answer p {
+    padding: var(--spacing-lg);
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+}
+
+.email-signup {
+    text-align: center;
+    margin-top: var(--spacing-xxl);
+}
+
+/* ========== Footer Styles ========== */
+.site-footer {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--color-background);
+    color: var(--color-text-secondary);
+}
+
+.footer-top {
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+}
+
+.footer-column {
+    flex: 0 0 25%;
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer-column ul li {
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-column a {
+    font-size: var(--font-size-sm);
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+}
+
+.copyright {
+    font-size: var(--font-size-xs);
+}
+
+/* ========== Responsive Styles ========== */
+@media (max-width: 1024px) {
+    :root {
+        --font-size-hero: 40px;
+    }
+    
+    .hero {
+        height: 650px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-hero: 32px;
+        --font-size-xl: 20px;
+    }
+    
+    .hero {
+        height: 550px;
+    }
+    
+    .email-form {
+        flex-direction: column;
+    }
+    
+    .email-input {
+        width: 100%;
+    }
+    
+    .reasons-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-column {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-hero: 28px;
+        --font-size-xl: 18px;
+        --spacing-xxl: 40px;
+    }
+    
+    .hero {
+        height: 500px;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+    
+    .btn-get-started {
+        font-size: var(--font-size-md);
+        padding: var(--spacing-sm) var(--spacing-lg);
+    }
+    
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-column {
+        flex: 0 0 100%;
+    }
+}

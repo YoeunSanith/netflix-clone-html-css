@@ -1,0 +1,36 @@
+/* CSS Variables */
+:root {
+    /* Colors */
+    --color-primary: #e50914;
+    --color-primary-hover: #f40612;
+    --color-text: #ffffff;
+    --color-text-secondary: #a3a3a3;
+    --color-background: #000000;
+    --color-background-alt: #141414;
+    --color-card-bg: #222222;
+    --color-overlay: rgba(0, 0, 0, 0.5);
+    --color-input-bg: rgba(22, 22, 22, 0.7);
+    --color-border: #333333;
+    --color-faq-bg: #303030;
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 60px;
+    
+    /* Font sizes */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+    --font-size-hero: 48px;
+    
+    /* Borders */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+}
