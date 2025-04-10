@@ -23,6 +23,7 @@
     color: var(--color-text);
     font-size: var(--font-size-lg);
     border: none;
+    border-radius: var(--border-radius-xl);
     outline: none;
     text-align: left;
     cursor: pointer;
@@ -42,6 +43,8 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease;
+    border-radius: var(--border-radius-xl);
+    margin-top: var(--spacing-sm);
 }
 
 .faq__answer p {

@@ -1,27 +1,27 @@
 /* Trending Section Styles */
 .trending {
-    padding: var(--spacing-xxl) 0;  /* Using variable for padding */
-    background-color: var(--color-background); /* Using variable for background */
+    padding: var(--spacing-xxl) 0; 
+    background-color: var(--color-background);
 }
 
 /* Heading */
-.trending h2 {
-    margin-bottom: var(--spacing-md);  /* Using variable for spacing */
+.trending h1 {
+    margin-bottom: var(--spacing-md); 
     font-weight: 700;
-    font-size: 1.5rem;  /* Hardcoded size */
+    font-size: 1.5rem; 
 }
 
 /* Carousel Styles */
 .trending-carousel {
     display: flex;
-    gap: var(--spacing-sm);  /* Using variable for spacing */
+    gap: var(--spacing-xl);  
     overflow-x: auto;
-    padding: var(--spacing-sm) 0;  /* Using variable for spacing */
-    scrollbar-width: none;  /* Firefox */
+    padding: var(--spacing-sm) 0;  
+    scrollbar-width: none;  
 }
 
 .trending-carousel::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Edge */
+    display: none;
 }
 
 /* Movie/Trending Item */
@@ -29,7 +29,7 @@
     position: relative;
     flex: 0 0 180px;
     height: 270px;
-    border-radius: var(--border-radius-sm);  /* Using variable for border radius */
+    border-radius: var(--border-radius-xl); 
     overflow: hidden;
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -48,8 +48,8 @@
 /* Number badge like Netflix Top 10 */
 .number {
     position: absolute;
-    top: var(--spacing-xs);  /* Using variable for spacing */
-    left: var(--spacing-xs);  /* Using variable for spacing */
+    top: var(--spacing-xs); 
+    left: var(--spacing-xs); 
     font-size: 2.5rem;
     font-weight: 800;
     color: rgba(255, 255, 255, 0.8);
@@ -58,19 +58,19 @@
 }
 
 /* Overlay for text info */
-.movie-overlay {
+/* .movie-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: var(--spacing-xs);  /* Using variable for padding */
+    padding: var(--spacing-xs);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
     z-index: 1;
-}
+} */
 
 /* Category label */
 .movie-label {
-    font-size: var(--font-size-xs);  /* Using variable for font size */
+    font-size: var(--font-size-xs); 
     text-transform: uppercase;
     margin-bottom: 4px;
     opacity: 0.8;
@@ -83,29 +83,3 @@
     text-transform: uppercase;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-    .movie-item {
-        flex: 0 0 140px;
-        height: 210px;
-    }
-
-    .number {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .movie-item {
-        flex: 0 0 120px;
-        height: 180px;
-    }
-
-    .number {
-        font-size: 1.8rem;
-    }
-
-    .movie-title {
-        font-size: 0.8rem;
-    }
-}

@@ -8,34 +8,7 @@
 @import url("faq.css");
 @import url("footer.css");
 @import url("responsive.css");
-
-/* Global styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--color-background);
-    color: var(--color-text);
-    line-height: 1.5;
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-}
-
-.section-title {
-    font-size: var(--font-size-xl);
-    font-weight: 700;
-    margin-bottom: var(--spacing-xl);
-    color: var(--color-text);
-}
+@import url("global.css");
 
 /* Common button styles */
 .get-started-btn {
@@ -65,18 +38,18 @@ body {
 
 .sign-in-btn {
     display: inline-block;
-    background-color: var(--color-primary);
-    color: var(--color-text);
+    background-color: var(--color-text);
+    color: var(--color-black);
     font-size: var(--font-size-sm);
     font-weight: 500;
     padding: var(--spacing-xs) var(--spacing-md);
-    border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-xl);
     text-decoration: none;
     transition: background-color 0.2s;
 }
 
 .sign-in-btn:hover {
-    background-color: var(--color-primary-hover);
+    background-color: var(--color-gray-400);
     text-decoration: none;
 }
 

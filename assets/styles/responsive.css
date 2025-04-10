@@ -91,3 +91,30 @@
         padding: var(--spacing-xl) 0;
     }
 }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .movie-item {
+        flex: 0 0 140px;
+        height: 210px;
+    }
+
+    .number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-item {
+        flex: 0 0 120px;
+        height: 180px;
+    }
+
+    .number {
+        font-size: 1.8rem;
+    }
+
+    .movie-title {
+        font-size: 0.8rem;
+    }
+}
