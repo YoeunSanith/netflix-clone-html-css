@@ -11,6 +11,42 @@
     font-size: 1.5rem; 
 }
 
+/* Carousel Wrapper for Positioning */
+.trending-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Positioning */
+.prev-btn {
+    left: var(--spacing-sm);
+}
+
+.next-btn {
+    right: var(--spacing-sm);
+}
+
 /* Carousel Styles */
 .trending-carousel {
     display: flex;

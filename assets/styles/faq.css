@@ -9,7 +9,7 @@
 }
 
 .faq__item {
-    margin-bottom: 8px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .faq__question {

@@ -1,4 +1,19 @@
 // Wait for the DOM to load
+//trending news
+document.addEventListener("DOMContentLoaded", () => {
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    const carousel = document.querySelector(".trending-carousel");
+
+    nextBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: 200, behavior: "smooth" });
+    });
+
+    prevBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: -200, behavior: "smooth" });
+    });
+});
+// faq question
 document.addEventListener("DOMContentLoaded", () => {
     const questions = document.querySelectorAll(".faq__question");
 
